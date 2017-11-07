@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>MQTT Dashboard</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/mqtt_dashboard.css">
+	</head>
+	<body>
+
+	<div class="container-fluid">
+		<div class="row" id="row1">
+			<div class="card button_block d-flex text-center" onclick='sendMessage("test/", "hello");'>
+				<div class="card-header">Wifi</div>
+				<div class="card-body align-items-center d-flex justify-content-center">
+					<i class="fa fa-wifi fa-4x" aria-hidden="true"></i>
+				</div>
+			</div>
+
+			<div class="card button_block d-flex text-center">
+				<div class="card-header">Lumière</div>
+				<div class="card-body align-items-center d-flex justify-content-center">
+					<i class="fa fa-lightbulb-o fa-4x" aria-hidden="true"></i>
+				</div>
+			</div>
+
+			<div class="card button_block d-flex text-center">
+				<div class="card-header">Sonnette</div>
+				<div class="card-body align-items-center d-flex justify-content-center">
+					<i class="fa fa-bell fa-4x" aria-hidden="true"></i>
+				</div>
+			</div>
+
+			<div class="card button_block d-flex text-center">
+				<div class="card-header">Television</div>
+				<div class="card-body align-items-center d-flex justify-content-center">
+					<i class="fa fa-television fa-4x" aria-hidden="true"></i>
+				</div>
+			</div>
+
+			<div class="card keyboard d-flex text-center">
+				<div class="card-header">Alarme</div>
+
+				<div class="container-fluid">
+					<div class="row">
+						<div class="key col-4 align-items-center d-flex justify-content-center" onclick='sendMessage("keyboard/", "1");'>1</div>
+						<div class="key col-4 align-items-center d-flex justify-content-center" onclick='sendMessage("keyboard/", "2");'>2</div>
+						<div class="key col-4 align-items-center d-flex justify-content-center" onclick='sendMessage("keyboard/", "3");'>3</div>
+					</div>
+					<div class="row">
+						<div class="key col-4 align-items-center d-flex justify-content-center" onclick='sendMessage("keyboard/", "4");'>4</div>
+						<div class="key col-4 align-items-center d-flex justify-content-center" onclick='sendMessage("keyboard/", "5");'>5</div>
+						<div class="key col-4 align-items-center d-flex justify-content-center" onclick='sendMessage("keyboard/", "6");'>6</div>
+					</div>
+					<div class="row">
+						<div class="key col-4 align-items-center d-flex justify-content-center" onclick='sendMessage("keyboard/", "7");'>7</div>
+						<div class="key col-4 align-items-center d-flex justify-content-center" onclick='sendMessage("keyboard/", "8");'>8</div>
+						<div class="key col-4 align-items-center d-flex justify-content-center" onclick='sendMessage("keyboard/", "9");'>9</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.2.1.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/mqttws31.js"></script>
+	<script src="js/mqtt_dashboard.js"></script>
+
+	<script>
+		MQTTconnect();
+	</script>
+ 
+	</body>
+</html>
